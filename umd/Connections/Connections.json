@@ -1,0 +1,58 @@
+{
+  "4ade2aa1-4def-45e6-9f2e-d1541e600b89": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://ts.accenture.com/sites/JERA_DEV": {
+        "dataSources": {
+          "案件項目仮": {
+            "tableName": "4ef8880e-ca8f-4b9a-a2df-d004a80fd2a9"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "案件項目仮",
+      "Documents"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "4ade2aa1-4def-45e6-9f2e-d1541e600b89"
+  },
+  "6471a2c1-ca40-4f9e-b33b-f57fec5d6697": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://ts.accenture.com/sites/JERA_DEV": {
+        "dataSources": {
+          "Documents": {
+            "tableName": "54cddb3f-6f21-4384-9c83-8d214f4487e1"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Documents"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "6471a2c1-ca40-4f9e-b33b-f57fec5d6697"
+  }
+}

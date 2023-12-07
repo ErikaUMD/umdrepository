@@ -1,0 +1,503 @@
+schedule As screen:
+
+    Container1_3 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =Parent.Width
+        ZIndex: =1
+
+        topheader_container_3 As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =10
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(247, 247, 247, 1)
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =100
+            LayoutMinWidth: =100
+            ZIndex: =1
+
+            Image1_3 As image:
+                Image: ='JERA-logo'
+                X: =40
+                ZIndex: =1
+
+            Goup_3 As text:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderThickness: =0
+                Color: =RGBA(0, 0, 0, 0)
+                Default: ="Text input"
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(247, 247, 247, 1)
+                Height: =0
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                Width: =0
+                X: =456
+                Y: =30
+                ZIndex: =2
+
+        Container2_3 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =Container7_3.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =5
+
+            menu_container_3 As groupContainer.manualLayoutContainer:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =10
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(247, 247, 247, 1)
+                Height: =Container7_3.Height
+                Width: =Parent.Width/5
+                ZIndex: =1
+
+                Label1_3 As label:
+                    FontWeight: =FontWeight.Bold
+                    Height: =42
+                    Size: =20
+                    Text: ="JERA"
+                    Width: =97
+                    X: =25
+                    Y: =28
+                    ZIndex: =1
+
+                Icon1_3 As icon.ChevronDown:
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =34
+                    Icon: =Icon.ChevronDown
+                    Width: =34
+                    X: =175
+                    Y: =36
+                    ZIndex: =2
+
+                TabList1_3 As タブ一覧.pcfdataset:
+                    Alignment: ='TabList.Alignment'.Vertical
+                    BasePaletteColor: =RGBA(0, 0, 0, 1)
+                    DefaultSelectedItems: =LookUp(colTabData, Screen = App.ActiveScreen.Name)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =0
+                    Height: =90
+                    Items: =colTabData
+                    OnSelect: =Switch(Self.Selected.Screen,"Ichiran",Navigate(schedule),"Import", Navigate(Import))
+                    Size: ='TabList.Size'.Large
+                    Width: =230.8
+                    X: =40.80000000000001
+                    Y: =88
+                    ZIndex: =3
+
+                    Name1_3 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Name"
+                        FieldName: ="Name"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =1
+                        ZIndex: =11
+
+            Container7_3 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =ichiran_header_container_1.Height+ichiran_function_container_1.Height+ichiran_header_text_container_1.Height+ichiran_content_1.Height+paging_container_1.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                Width: =Parent.Width-menu_container_3.Width
+                X: =menu_container_3.Width
+                ZIndex: =2
+
+                ichiran_header_container_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.Regular
+                    Fill: =RGBA(135, 148, 161, 1)
+                    FillPortions: =0
+                    Height: =100
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    RadiusBottomLeft: =15
+                    RadiusBottomRight: =15
+                    RadiusTopLeft: =15
+                    RadiusTopRight: =15
+                    Width: =Parent.Width-60
+                    ZIndex: =1
+
+                    Label2_3 As label:
+                        Color: =RGBA(255, 255, 255, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =42
+                        Size: =30
+                        Text: ="スケジュール"
+                        Width: =267
+                        X: =20
+                        Y: =30
+                        ZIndex: =1
+
+                ichiran_function_container_1 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =search_button_3.Height+search_ichiran_container_1.Height+50
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =150
+                    ZIndex: =2
+
+                    search_ichiran_container_1 As groupContainer.horizontalAutoLayoutContainer:
+                        BorderThickness: =1
+                        DropShadow: =DropShadow.Regular
+                        Height: =60
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =20
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =15
+                        RadiusBottomRight: =15
+                        RadiusTopLeft: =15
+                        RadiusTopRight: =15
+                        Width: =Parent.Width-60
+                        X: =30
+                        Y: =20
+                        ZIndex: =1
+
+                        freeword_search_1 As text:
+                            BorderThickness: =0
+                            Default: =""
+                            HintText: ="案件名、ID、フリー"
+                            Width: =Parent.Width/3
+                            ZIndex: =1
+
+                        tantousha_search_1 As dropdown:
+                            AccessibleLabel: ="担当者"
+                            BorderThickness: =0
+                            ChevronBackground: =RGBA(139, 154, 159, 1)
+                            ContentLanguage: ="担当者"
+                            Default: ="担当者"
+                            Items: =["担当者"]
+                            SelectionFill: =RGBA(139, 154, 159, 1)
+                            Tooltip: ="担当者"
+                            Width: =Parent.Width/5
+                            ZIndex: =2
+
+                        date_search_1 As datepicker:
+                            BorderThickness: =0
+                            IconBackground: =RGBA(135, 148, 161, 1)
+                            Width: =Parent.Width/5
+                            ZIndex: =3
+
+                        search_button_2 As button:
+                            Fill: =RGBA(135, 148, 161, 1)
+                            Text: ="検索"
+                            Width: =Parent.Width/8
+                            X: =-25
+                            ZIndex: =4
+
+                    search_button_3 As button:
+                        Fill: =RGBA(135, 148, 161, 1)
+                        Text: ="自動アサイン"
+                        Width: =Parent.Width/8
+                        X: =30
+                        Y: =97
+                        ZIndex: =2
+
+                ichiran_header_text_container_1 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =50
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width-60
+                    ZIndex: =3
+
+                    "'id.text_2' As label":
+                        Align: =Align.Center
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =5
+                        Color: =RGBA(255, 255, 255, 1)
+                        Fill: =RGBA(135, 148, 161, 1)
+                        FontWeight: =FontWeight.Bold
+                        Height: =Parent.Height
+                        Text: ="ID"
+                        Width: =Parent.Width/8
+                        ZIndex: =1
+
+                    "'title.text_2' As label":
+                        Align: =Align.Center
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =5
+                        Color: =RGBA(255, 255, 255, 1)
+                        Fill: =RGBA(135, 148, 161, 1)
+                        FontWeight: =FontWeight.Bold
+                        Height: =Parent.Height
+                        Text: ="案件名"
+                        Width: =Parent.Width*4/8
+                        X: ='id.text_2'.X+'id.text_2'.Width
+                        Y: ='id.text_2'.Y
+                        ZIndex: =2
+
+                    "'tantousha.text_2' As label":
+                        Align: =Align.Center
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =5
+                        Color: =RGBA(255, 255, 255, 1)
+                        Fill: =RGBA(135, 148, 161, 1)
+                        FontWeight: =FontWeight.Bold
+                        Height: =Parent.Height
+                        Text: ="担当者"
+                        Width: =Parent.Width/4
+                        X: ='title.text_2'.X+'title.text_2'.Width
+                        Y: ='id.text_2'.Y
+                        ZIndex: =3
+
+                    "'createddate.text_2' As label":
+                        Align: =Align.Center
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =5
+                        Color: =RGBA(255, 255, 255, 1)
+                        Fill: =RGBA(135, 148, 161, 1)
+                        FontWeight: =FontWeight.Bold
+                        Height: =Parent.Height
+                        Text: ="作成した日付"
+                        Width: =Parent.Width/8
+                        X: ='tantousha.text_2'.X+'tantousha.text_2'.Width
+                        Y: ='id.text_2'.Y
+                        ZIndex: =4
+
+                "ichiran_content_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    AlignInContainer: =AlignInContainer.Center
+                    DelayItemLoading: =true
+                    FillPortions: =0
+                    Height: =CountRows(案件項目)*Self.TemplateHeight
+                    Items: =案件項目
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =150
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =55
+                    Width: =Parent.Width-60
+                    X: =40
+                    Y: =40
+                    ZIndex: =4
+
+                    Separator2_1 As rectangle:
+                        Height: =8
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =Parent.TemplateHeight - Self.Height
+                        ZIndex: =5
+
+                    "'id.text_3' As label":
+                        Align: =Align.Center
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =5
+                        Height: =Parent.TemplateHeight
+                        HoverColor: |
+                            =RGBA(0,34,255,100)
+                        HoverFill: =RGBA(135, 148, 161, 0.67)
+                        OnSelect: =Navigate(shousai)
+                        Text: =ThisItem.ID
+                        Width: ='id.text_2'.Width
+                        X: ='id.text_2'.X
+                        ZIndex: =6
+
+                    "'title.text_3' As label":
+                        Align: =Align.Center
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =5
+                        Height: =Parent.TemplateHeight
+                        HoverColor: |
+                            =RGBA(0,34,255,100)
+                        HoverFill: =RGBA(135, 148, 161, 0.67)
+                        OnSelect: =Navigate(shousai)
+                        Text: =ThisItem.タイトル
+                        Width: ='title.text_2'.Width
+                        X: ='id.text_3'.X+'id.text_3'.Width
+                        Y: ='id.text_3'.Y
+                        ZIndex: =7
+
+                    "'tantousha.text_3' As label":
+                        Align: =Align.Center
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =5
+                        Height: =Parent.TemplateHeight
+                        HoverColor: |
+                            =RGBA(0,34,255,100)
+                        HoverFill: =RGBA(135, 148, 161, 0.67)
+                        OnSelect: =Navigate(shousai)
+                        Text: =ThisItem.担当者
+                        Width: ='tantousha.text_2'.Width
+                        X: ='title.text_3'.X+'title.text_3'.Width
+                        Y: ='id.text_3'.Y
+                        ZIndex: =8
+
+                    "'createddate.text_3' As label":
+                        Align: =Align.Center
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =5
+                        Height: =Parent.TemplateHeight
+                        HoverColor: |
+                            =RGBA(0,34,255,100)
+                        HoverFill: =RGBA(135, 148, 161, 0.67)
+                        OnSelect: =Navigate(shousai)
+                        Text: |+
+                            =Text(DateTimeValue(ThisItem.登録日時), "yyyy/mm/dd")
+                            
+                        Width: ='createddate.text_2'.Width
+                        X: ='tantousha.text_3'.X+'tantousha.text_3'.Width
+                        Y: ='id.text_3'.Y
+                        ZIndex: =9
+
+                paging_container_1 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =50
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    X: =40
+                    Y: =40
+                    ZIndex: =5
+
+                    Button1_11 As button:
+                        BorderColor: =Color.Black
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Text: ="1"
+                        Width: =33
+                        X: =429
+                        Y: =(paging_container_1.Height-Self.Height)/2
+                        ZIndex: =1
+
+                    Button1_12 As button:
+                        BorderColor: =Color.Black
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Text: ="2"
+                        Width: =33
+                        X: =477
+                        Y: =(paging_container_1.Height-Self.Height)/2
+                        ZIndex: =2
+
+                    Button1_13 As button:
+                        BorderColor: =Color.Black
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Text: ="3"
+                        Width: =33
+                        X: =525
+                        Y: =(paging_container_1.Height-Self.Height)/2
+                        ZIndex: =3
+
+                    Button1_14 As button:
+                        BorderColor: =Color.Black
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Text: ="4"
+                        Width: =33
+                        X: =573
+                        Y: =(paging_container_1.Height-Self.Height)/2
+                        ZIndex: =4
+
+                    Button1_15 As button:
+                        BorderColor: =Color.Black
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Text: ="5"
+                        Width: =33
+                        X: =621
+                        Y: =(paging_container_1.Height-Self.Height)/2
+                        ZIndex: =5
+
+                    Button1_10 As button:
+                        BorderColor: =Color.Black
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Text: ="<"
+                        Width: =33
+                        X: =381
+                        Y: =(paging_container_1.Height-Self.Height)/2
+                        ZIndex: =6
+
+                    Button1_9 As button:
+                        BorderColor: =Color.Black
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Text: ="≼"
+                        Width: =33
+                        X: =333
+                        Y: =(paging_container_1.Height-Self.Height)/2
+                        ZIndex: =7
+
+                    Button1_16 As button:
+                        BorderColor: =Color.Black
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Text: =">"
+                        Width: =33
+                        X: =669
+                        Y: =(paging_container_1.Height-Self.Height)/2
+                        ZIndex: =8
+
+                    Button1_17 As button:
+                        BorderColor: =Color.Black
+                        BorderThickness: =1
+                        Color: =RGBA(0, 0, 0, 1)
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =30
+                        Text: ="≽"
+                        Width: =33
+                        X: =717
+                        Y: =(paging_container_1.Height-Self.Height)/2
+                        ZIndex: =9
+
+                    Godown_1 As text:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =0
+                        Color: =RGBA(0, 0, 0, 0)
+                        Default: ="Text input"
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =0
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Width: =0
+                        X: =40
+                        Y: =10
+                        ZIndex: =10
+
+    Icon2_2 As icon.ChevronDown:
+        Height: =35
+        Icon: =Icon.ChevronDown
+        OnSelect: =SetFocus(Godown_1)
+        Width: =22
+        X: =1323
+        Y: =666
+        ZIndex: =2
+
+    Icon4_2 As icon.ChevronUp:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =33
+        Icon: =Icon.ChevronUp
+        OnSelect: =SetFocus(Goup_3)
+        Width: =21
+        X: =1324
+        Y: =633
+        ZIndex: =3
+

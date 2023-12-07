@@ -1,0 +1,341 @@
+shousai As screen:
+
+    Container1_1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =Parent.Width
+        ZIndex: =1
+
+        topheader_container_1 As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =10
+            DropShadow: =DropShadow.None
+            Fill: =RGBA(247, 247, 247, 1)
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =100
+            LayoutMinWidth: =100
+            ZIndex: =1
+
+            Image1_1 As image:
+                Image: ='JERA-logo'
+                X: =40
+                ZIndex: =1
+
+            Goup_1 As text:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderThickness: =0
+                Color: =RGBA(0, 0, 0, 0)
+                Default: ="Text input"
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                Fill: =RGBA(247, 247, 247, 1)
+                Height: =0
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                Width: =0
+                X: =456
+                Y: =30
+                ZIndex: =2
+
+            Icon7_1 As icon.Hamburger:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                Color: =RGBA(135, 148, 161, 1)
+                Height: =52
+                Icon: =Icon.Hamburger
+                OnSelect: =Set(hide_tab, !hide_tab)
+                Width: =52
+                X: =184
+                Y: =24
+                ZIndex: =3
+
+        Container2_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.None
+            FillPortions: =0
+            Height: =Container7_1.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =5
+
+            menu_container_1 As groupContainer.manualLayoutContainer:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =10
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(247, 247, 247, 1)
+                Height: =Container7_1.Height
+                Width: =If(hide_tab,0,Parent.Width/5)
+                ZIndex: =1
+
+                Label1_1 As label:
+                    FontWeight: =FontWeight.Bold
+                    Height: =42
+                    Size: =20
+                    Text: ="JERA"
+                    Width: =97
+                    X: =25
+                    Y: =25
+                    ZIndex: =1
+
+                Icon1_1 As icon.ChevronDown:
+                    Height: =34
+                    Icon: =Icon.ChevronDown
+                    OnSelect: =Set(hide_menu,true)
+                    Visible: =If(hide_menu,false,true)
+                    Width: =34
+                    X: =175
+                    Y: =36
+                    ZIndex: =2
+
+                TabList1_1 As タブ一覧.pcfdataset:
+                    Alignment: ='TabList.Alignment'.Vertical
+                    BasePaletteColor: =RGBA(0, 0, 0, 1)
+                    DefaultSelectedItems: =LookUp(colTabData, Screen = App.ActiveScreen.Name)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =0
+                    Height: =90
+                    Items: =colTabData
+                    OnSelect: =Switch(Self.Selected.Screen,"Ichiran",Navigate(Ichiran),"Import", Navigate(Import))
+                    Size: ='TabList.Size'.Large
+                    Visible: =If(hide_menu,false,true)
+                    Width: =230.8
+                    X: =40
+                    Y: =88
+                    ZIndex: =3
+
+                    Name1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Name"
+                        FieldName: ="Name"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =1
+                        ZIndex: =11
+
+                Icon3_1 As icon.ChevronUp:
+                    Height: =42
+                    Icon: =Icon.ChevronUp
+                    OnSelect: =Set(hide_menu,false)
+                    Visible: =If(hide_menu,true, false)
+                    Width: =34
+                    X: =175
+                    Y: =28
+                    ZIndex: =4
+
+            Container7_1 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Height: =shousai_header_container_1.Height+shousai_function_container_1.Height+Container4.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width-menu_container_1.Width
+                X: =menu_container_1.Width
+                ZIndex: =2
+
+                Container4 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =50
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    ZIndex: =1
+
+                    Label3 As label:
+                        Color: =RGBA(135, 148, 161, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =50
+                        HoverColor: =Color.Black
+                        OnSelect: =Navigate(Ichiran)
+                        Size: =16
+                        Text: ="一覧ページへ"
+                        Underline: =true
+                        Width: =161
+                        X: =61
+                        ZIndex: =1
+
+                    Label3_1 As label:
+                        Color: =RGBA(135, 148, 161, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Height: =50
+                        Size: =20
+                        Text: ="<"
+                        Width: =31
+                        X: =30
+                        ZIndex: =2
+
+                shousai_header_container_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DropShadow: =DropShadow.Regular
+                    Fill: =RGBA(135, 148, 161, 1)
+                    FillPortions: =0
+                    Height: =50
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =50
+                    RadiusBottomLeft: =15
+                    RadiusBottomRight: =15
+                    RadiusTopLeft: =15
+                    RadiusTopRight: =15
+                    Width: =Parent.Width-60
+                    ZIndex: =2
+
+                    Label2_1 As label:
+                        Color: =RGBA(255, 255, 255, 1)
+                        FontWeight: =FontWeight.Semibold
+                        Size: =20
+                        Text: ="【" & ichiran_content.Selected.ID &"】" & ichiran_content.Selected.タイトル
+                        Width: =Parent.Width
+                        Y: =(shousai_header_container_1.Height-Self.Height)/2
+                        ZIndex: =1
+
+                    Icon6 As icon.Edit:
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledColor: =RGBA(79, 90, 94, 1)
+                        DisplayMode: =If(edit_mode=true,DisplayMode.Disabled,DisplayMode.Edit)
+                        Height: =shousai_header_container_1.Height -5
+                        Icon: =Icon.Edit
+                        OnSelect: =Set(edit_mode,true)
+                        Width: =shousai_header_container_1.Height -5
+                        X: =938
+                        Y: =(Parent.Height-Self.Height)/2
+                        ZIndex: =3
+
+                shousai_function_container_1 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =600
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =150
+                    ZIndex: =3
+
+                    Label4 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Height: =39
+                        PaddingLeft: =40
+                        Size: =16
+                        Text: ="担当会社"
+                        Width: =161
+                        Y: =24
+                        ZIndex: =1
+
+                    Label4_1 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Height: =39
+                        PaddingLeft: =40
+                        Size: =16
+                        Text: ="担当者"
+                        Width: =161
+                        Y: =79
+                        ZIndex: =2
+
+                    Label4_2 As label:
+                        FontWeight: =FontWeight.Semibold
+                        Height: =39
+                        PaddingLeft: =40
+                        Size: =16
+                        Text: ="ステータス"
+                        Width: =161
+                        Y: =135
+                        ZIndex: =3
+
+                    Dropdown1 As dropdown:
+                        BorderColor: =RGBA(135, 148, 161, 1)
+                        ChevronBackground: =RGBA(135, 148, 161, 1)
+                        ChevronHoverBackground: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+                        Default: =ichiran_content.Selected.ステータス.Value
+                        DisplayMode: =If(edit_mode=true,DisplayMode.Edit, DisplayMode.View)
+                        Fill: =
+                        Height: =39
+                        HoverFill: =RGBA(219, 219, 219, 1)
+                        Items: =["未着手","対応中","完了"]
+                        PressedFill: =RGBA(116, 116, 116, 1)
+                        SelectionFill: =RGBA(135, 148, 161, 1)
+                        Width: =185
+                        X: =228
+                        Y: =135
+                        ZIndex: =4
+
+                    Dropdown1_1 As dropdown:
+                        BorderColor: =RGBA(135, 148, 161, 1)
+                        ChevronBackground: =RGBA(135, 148, 161, 1)
+                        ChevronHoverBackground: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+                        DisplayMode: =If(edit_mode=true,DisplayMode.Edit, DisplayMode.View)
+                        Height: =39
+                        HoverFill: =RGBA(219, 219, 219, 1)
+                        Items: =["JERA","BPO"]
+                        PressedFill: =RGBA(116, 116, 116, 1)
+                        SelectionFill: =RGBA(135, 148, 161, 1)
+                        Width: =185
+                        X: =228
+                        Y: =24
+                        ZIndex: =5
+
+                    Dropdown1_2 As dropdown:
+                        BorderColor: =RGBA(135, 148, 161, 1)
+                        ChevronBackground: =RGBA(135, 148, 161, 1)
+                        ChevronHoverBackground: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+                        Default: =LookUp(案件項目,ID=ichiran_content.Selected.ID).担当者
+                        DisplayMode: =If(edit_mode=true,DisplayMode.Edit, DisplayMode.View)
+                        Height: =39
+                        HoverFill: =RGBA(219, 219, 219, 1)
+                        Items: =案件項目
+                        PressedFill: =RGBA(116, 116, 116, 1)
+                        SelectionFill: =RGBA(135, 148, 161, 1)
+                        Width: =185
+                        X: =228
+                        Y: =79
+                        ZIndex: =6
+
+                    Rectangle1 As rectangle:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderThickness: =1
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =295
+                        Width: =997
+                        X: =40
+                        Y: =196
+                        ZIndex: =7
+
+                    GoDown_shousai As text:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderThickness: =0
+                        Color: =RGBA(0, 0, 0, 0)
+                        Default: ="Text input"
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(0, 0, 0, 0)
+                        Height: =0
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Width: =0
+                        X: =802
+                        Y: =569
+                        ZIndex: =8
+
+                    Button2 As button:
+                        Fill: =RGBA(135, 148, 161, 1)
+                        HoverFill: =ColorFade(RGBA(0, 0, 0, 1), -20%)
+                        OnSelect: |
+                            =Set(edit_mode,false);
+                        Text: ="確定"
+                        Visible: =If(edit_mode=true,true,false)
+                        X: =877
+                        Y: =529
+                        ZIndex: =9
+
+    Icon2_1 As icon.ChevronDown:
+        Height: =35
+        Icon: =Icon.ChevronDown
+        OnSelect: =SetFocus(GoDown_shousai)
+        Width: =22
+        X: =1323
+        Y: =666
+        ZIndex: =2
+
+    Icon4_1 As icon.ChevronUp:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =33
+        Icon: =Icon.ChevronUp
+        OnSelect: =SetFocus(Goup_1)
+        Width: =21
+        X: =1324
+        Y: =633
+        ZIndex: =3
+

@@ -1,0 +1,46 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+    "CdpRevision": {
+      "BaseUrl": "/",
+      "LastChangedTimeString": "2023-11-01T17:23:29.3020000Z",
+      "RevisionNumber": 1
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "{FilenameWithExtension}": "拡張子付きのファイル名",
+      "{FullPath}": "完全パス ",
+      "{Identifier}": "識別子",
+      "{IsCheckedOut}": "チェックアウト済み",
+      "{IsFolder}": "フォルダーである",
+      "{Link}": "アイテムへのリンク",
+      "{ModerationComment}": "このリスト アイテムのコンテンツの承認に関連付けられているコメント",
+      "{ModerationStatus}": "コンテンツの承認状態",
+      "{Name}": "名前",
+      "{Path}": "フォルダーのパス",
+      "{Thumbnail}": "Thumbnail",
+      "{TriggerWindowEndToken}": "ウィンドウ終了のトークンのトリガー",
+      "{TriggerWindowStartToken}": "ウィンドウ開始のトークンのトリガー",
+      "{VersionNumber}": "バージョン番号",
+      "Author": "登録者",
+      "Author#Claims": "登録者 Claims",
+      "CheckoutUser": "チェックアウト先",
+      "CheckoutUser#Claims": "チェックアウト先 Claims",
+      "ComplianceAssetId": "コンプライアンス資産 ID",
+      "Created": "登録日時",
+      "Editor": "更新者",
+      "Editor#Claims": "更新者 Claims",
+      "ID": "ID",
+      "Modified": "更新日時",
+      "OData__ColorTag": "色タグ",
+      "OData__DisplayName": "秘密度",
+      "OData__ExtendedDescription": "説明",
+      "Title": "タイトル"
+    },
+    "DatasetName": "https://ts.accenture.com/sites/JERA_DEV",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "Documents",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

@@ -1,0 +1,25 @@
+App As appinfo:
+    BackEnabled: =true
+    OnStart: |-
+        =ClearCollect(
+            colTabData,
+            [
+                {
+                    Name: "一覧",
+                    Screen: "Ichiran"
+                },
+                {
+                    Name: "インポート",
+                    Screen: "Import"
+                }
+            ]
+        )
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

@@ -1,0 +1,1115 @@
+DetailScreen As screen:
+    BackgroundImage: =JERA70
+    ImagePosition: =ImagePosition.Tile
+
+    Button4_1 As button:
+        Align: =Align.Left
+        BorderColor: =RGBA(135, 148, 161, 1)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =63
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(135, 148, 161, 1)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        Size: =20
+        Text: ="【2 購買】　AAA2"
+        Width: =1110
+        X: =223
+        Y: =138
+        ZIndex: =29
+
+    Rectangle4_2 As rectangle:
+        Fill: =RGBA(247, 247, 247, 1)
+        Height: =71
+        Width: =1321
+        X: =12
+        Y: =5
+        ZIndex: =43
+
+    Rectangle4_3 As rectangle:
+        Fill: =RGBA(247, 247, 247, 1)
+        Height: =650
+        Width: =200
+        X: =12
+        Y: =88
+        ZIndex: =44
+
+    menu_1 As icon.Hamburger:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(135, 148, 161, 1)
+        Height: =52
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(hide_tab, !hide_tab)
+        Width: =52
+        X: =151
+        Y: =14
+        ZIndex: =46
+
+    jeratitle_1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        Size: =18
+        Text: ="JERA"
+        Width: =97
+        X: =20
+        Y: =97
+        ZIndex: =47
+
+    Icon8_1 As icon.ChevronDown:
+        Height: =44
+        Icon: =Icon.ChevronDown
+        Width: =25
+        X: =167
+        Y: =96
+        ZIndex: =48
+
+    jeralogo_1 As image:
+        Height: =57
+        Image: ='JERA-logo'
+        X: =29
+        Y: =12
+        ZIndex: =49
+
+    list_1 As groupContainer.manualLayoutContainer:
+        Height: =108
+        Width: =183
+        X: =20
+        Y: =160
+        ZIndex: =50
+
+        Button5 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="調達依頼一覧"
+            Width: =128
+            ZIndex: =3
+
+        Button5_1 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="インポート"
+            Width: =128
+            Y: =39
+            ZIndex: =4
+
+    dashboard_1 As groupContainer.manualLayoutContainer:
+        Height: =108
+        Width: =183
+        X: =20
+        Y: =322
+        ZIndex: =51
+
+        Button5_2 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="SLA・KPI"
+            Width: =94
+            X: =4
+            Y: =4
+            ZIndex: =1
+
+        Button5_3 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="業務管理"
+            Width: =94
+            X: =4
+            Y: =43
+            ZIndex: =2
+
+    "'System Administration_1' As groupContainer.manualLayoutContainer":
+        Height: =185
+        Width: =183
+        X: =20
+        Y: =474
+        ZIndex: =52
+
+        Button5_4 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="アクティビティ履歴"
+            Width: =178
+            X: =4
+            Y: =4
+            ZIndex: =1
+
+        Button5_5 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="アクティビティログ"
+            Width: =157
+            X: =25
+            Y: =40
+            ZIndex: =2
+
+        Button5_6 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="ユーザー権限設定"
+            Width: =178
+            X: =4
+            Y: =80
+            ZIndex: =3
+
+        Button5_7 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="マスタ管理"
+            Width: =178
+            X: =4
+            Y: =115
+            ZIndex: =4
+
+    jeratitle_2 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Size: =14
+        Text: ="ダッシュボード"
+        Width: =149
+        X: =12
+        Y: =278
+        ZIndex: =53
+
+    Icon8_2 As icon.ChevronDown:
+        Height: =44
+        Icon: =Icon.ChevronDown
+        Width: =25
+        X: =167
+        Y: =274
+        ZIndex: =54
+
+    jeratitle_3 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Size: =14
+        Text: ="システム管理"
+        Width: =149
+        X: =12
+        Y: =431
+        ZIndex: =55
+
+    Icon8_3 As icon.ChevronDown:
+        Height: =44
+        Icon: =Icon.ChevronDown
+        Width: =25
+        X: =167
+        Y: =430
+        ZIndex: =56
+
+    Label7 As label:
+        Color: =RGBA(135, 148, 161, 1)
+        Height: =45
+        Text: ="＜調達依頼一覧画面へ"
+        Underline: =true
+        Width: =258
+        X: =223
+        Y: =93
+        ZIndex: =57
+
+    Form1 As form:
+        BorderColor: =RGBA(139, 154, 159, 1)
+        BorderThickness: =1
+        DataSource: =案件項目
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =376
+        Width: =1108
+        X: =224
+        Y: =218
+        ZIndex: =58
+
+        タイトル_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.タイトル
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@案件項目], DataSourceInfo.MaxLength, "Title")
+            Required: =false
+            Update: =DataCardValue1.Text
+            Width: =369
+            X: =0
+            Y: =0
+            ZIndex: =59
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            StarVisible1 As label:
+                Align: =Align.Center
+                Height: =DataCardKey1.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey1.Y
+                ZIndex: =4
+
+        担当者_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Tantousha"
+            Default: =ThisItem.担当者
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"Tantousha")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@案件項目], DataSourceInfo.MaxLength, "Tantousha")
+            Required: =false
+            Update: =DataCardValue2.Text
+            Width: =369
+            X: =1
+            Y: =0
+            ZIndex: =59
+
+            DataCardKey2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                ZIndex: =2
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+            StarVisible2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey2.Y
+                ZIndex: =4
+
+        ステータス_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Status"
+            Default: =ThisItem.ステータス
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"Status")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue3.Selected
+            Width: =369
+            X: =2
+            Y: =0
+            ZIndex: =59
+
+            DataCardKey3 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                IsSearchable: =false
+                Items: =Choices([@案件項目].Status)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Height: =DataCardKey3.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3.Y
+                ZIndex: =4
+
+        期限_DataCard1 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Deadline"
+            Default: =ThisItem.期限
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"Deadline")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue4.SelectedDate
+            Width: =369
+            X: =0
+            Y: =1
+            ZIndex: =59
+
+            DataCardKey4 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                ZIndex: =2
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: =DataCardKey4.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey4.Y
+                ZIndex: =4
+
+        添付ファイル_DataCard1 As typedDataCard.attachmentsEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.添付ファイル
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"{Attachments}")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue5.Attachments
+            Width: =369
+            X: =1
+            Y: =1
+            ZIndex: =59
+
+            DataCardKey5 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisplayMode: =Parent.DisplayMode
+                IsInDataCard: =true
+                Items: =Parent.Default
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                ZIndex: =2
+
+            ErrorMessage5 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            StarVisible5 As label:
+                Align: =Align.Center
+                Height: =DataCardKey5.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey5.Y
+                ZIndex: =4
+
+    Image2 As image:
+        Image: =bar
+        Width: =1072
+        X: =240
+        Y: =559
+        ZIndex: =59
+
+    Form2 As form:
+        BorderColor: =RGBA(106, 122, 127, 1)
+        BorderThickness: =1
+        DataSource: =案件項目
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =142
+        Width: =1109
+        X: =224
+        Y: =620
+        ZIndex: =60
+
+        タイトル_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.タイトル
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@案件項目], DataSourceInfo.MaxLength, "Title")
+            Required: =false
+            Update: =DataCardValue6.Text
+            Width: =369
+            X: =0
+            Y: =0
+            ZIndex: =61
+
+            DataCardKey6 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue6 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                ZIndex: =2
+
+            ErrorMessage6 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue6.Y + DataCardValue6.Height
+                ZIndex: =3
+
+            StarVisible6 As label:
+                Align: =Align.Center
+                Height: =DataCardKey6.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey6.Y
+                ZIndex: =4
+
+        担当者_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Tantousha"
+            Default: =ThisItem.担当者
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"Tantousha")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@案件項目], DataSourceInfo.MaxLength, "Tantousha")
+            Required: =false
+            Update: =DataCardValue7.Text
+            Width: =369
+            X: =1
+            Y: =0
+            ZIndex: =61
+
+            DataCardKey7 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue7 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                ZIndex: =2
+
+            ErrorMessage7 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue7.Y + DataCardValue7.Height
+                ZIndex: =3
+
+            StarVisible7 As label:
+                Align: =Align.Center
+                Height: =DataCardKey7.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey7.Y
+                ZIndex: =4
+
+        ステータス_DataCard2 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Status"
+            Default: =ThisItem.ステータス
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"Status")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue8.Selected
+            Width: =369
+            X: =2
+            Y: =0
+            ZIndex: =61
+
+            DataCardKey8 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue8 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                IsSearchable: =false
+                Items: =Choices([@案件項目].Status)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                ZIndex: =2
+
+            ErrorMessage8 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue8.Y + DataCardValue8.Height
+                ZIndex: =3
+
+            StarVisible8 As label:
+                Align: =Align.Center
+                Height: =DataCardKey8.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey8.Y
+                ZIndex: =4
+
+        期限_DataCard2 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Deadline"
+            Default: =ThisItem.期限
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"Deadline")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue9.SelectedDate
+            Width: =369
+            X: =0
+            Y: =1
+            ZIndex: =61
+
+            DataCardKey9 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue9 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                ZIndex: =2
+
+            ErrorMessage9 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue9.Y + DataCardValue9.Height
+                ZIndex: =3
+
+            StarVisible9 As label:
+                Align: =Align.Center
+                Height: =DataCardKey9.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey9.Y
+                ZIndex: =4
+
+        添付ファイル_DataCard2 As typedDataCard.attachmentsEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.添付ファイル
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@案件項目],DataSourceInfo.DisplayName,"{Attachments}")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue10.Attachments
+            Width: =369
+            X: =1
+            Y: =1
+            ZIndex: =61
+
+            DataCardKey10 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue10 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DisplayMode: =Parent.DisplayMode
+                IsInDataCard: =true
+                Items: =Parent.Default
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                ZIndex: =2
+
+            ErrorMessage10 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue10.Y + DataCardValue10.Height
+                ZIndex: =3
+
+            StarVisible10 As label:
+                Align: =Align.Center
+                Height: =DataCardKey10.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey10.Y
+                ZIndex: =4
+
+    Rectangle3 As rectangle:
+        BorderColor: =RGBA(53, 61, 63, 1)
+        BorderThickness: =4
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =552
+        Width: =613
+        X: =455
+        Y: =168
+        ZIndex: =61
+
+    Button4_4 As button:
+        BorderColor: =RGBA(135, 148, 161, 1)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =50
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(135, 148, 161, 1)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        RadiusBottomLeft: =1
+        RadiusBottomRight: =1
+        RadiusTopLeft: =1
+        RadiusTopRight: =1
+        Size: =20
+        Text: ="エスカレーション"
+        Width: =581
+        X: =471
+        Y: =190
+        ZIndex: =62
+
+    Button4_5 As button:
+        BorderColor: =RGBA(135, 148, 161, 1)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =44
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(135, 148, 161, 1)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =16
+        Text: ="確定"
+        Width: =150
+        X: =889
+        Y: =659
+        ZIndex: =63
+
+    Button4_6 As button:
+        BorderColor: =RGBA(135, 148, 161, 0.56)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        Fill: =RGBA(135, 148, 161, 0.54)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =44
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(135, 148, 161, 1)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =16
+        Text: ="キャンセル"
+        Width: =150
+        X: =481
+        Y: =659
+        ZIndex: =64
+
+    Form3 As form:
+        Height: =361
+        Width: =581
+        X: =471
+        Y: =268
+        ZIndex: =65
+

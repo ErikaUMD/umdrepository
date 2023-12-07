@@ -1,0 +1,1136 @@
+TopScreen_1 As screen:
+    BackgroundImage: =JERA70
+    ImagePosition: =ImagePosition.Tile
+    OnVisible: =ClearCollect(案件項目,案件項目仮);Set(JERA,false)
+
+    "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =4
+        DelayItemLoading: =true
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =299
+        Items: |-
+            =SortByColumns(Filter(案件項目,StartsWith(タイトル, TextInput1_1.Text)), "Title")
+            ///,If(SortDescending1, SortOrder.Descending, SortOrder.Ascending))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =83
+        Width: =1112
+        X: =223
+        Y: =398
+        ZIndex: =2
+
+        Title1_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =61
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.タスクステータス.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =118
+            X: =229
+            Y: =8
+            ZIndex: =2
+
+        Title4_1 As label:
+            Align: =Align.Right
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =18
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'コンプライアンス資産 ID'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =61
+            X: =155
+            Y: =8
+            ZIndex: =3
+
+        Separator1_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =3
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle2_1 As rectangle:
+            Height: =Parent.TemplateHeight - Separator1_1.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Title5_1 As label:
+            Align: =Align.Right
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =62
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.タイトル
+            VerticalAlign: =VerticalAlign.Top
+            Width: =108
+            X: =351
+            Y: =8
+            ZIndex: =8
+
+        Title6_1 As label:
+            Align: =Align.Right
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =62
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.優先度.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =73
+            X: =476
+            Y: =8
+            ZIndex: =9
+
+        Title7_1 As label:
+            Align: =Align.Right
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =62
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.担当会社名.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =81
+            X: =566
+            Y: =8
+            ZIndex: =10
+
+        Title8_1 As label:
+            Align: =Align.Right
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =62
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.担当者名.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =88
+            X: =658
+            Y: =8
+            ZIndex: =11
+
+        Title9_1 As label:
+            Align: =Align.Right
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =62
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.アサイン.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =64
+            X: =754
+            Y: =8
+            ZIndex: =12
+
+        Title10_1 As label:
+            Align: =Align.Right
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =62
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.調達依頼日
+            VerticalAlign: =VerticalAlign.Top
+            Width: =130
+            X: =827
+            Y: =8
+            ZIndex: =13
+
+        Title11_1 As label:
+            Align: =Align.Right
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =62
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.'納期/完工日/完了日'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =130
+            X: =966
+            Y: =8
+            ZIndex: =14
+
+        Label13_1 As label:
+            Align: =Align.Right
+            Height: =18
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.エスカレーション判定
+            Width: =84
+            X: =51
+            Y: =8
+            ZIndex: =15
+
+        Icon9_1 As icon.Warning:
+            Color: =RGBA(255, 0, 0, 1)
+            Height: =21
+            Icon: =Icon.Warning
+            OnSelect: =Select(Parent)
+            Visible: =If(ThisItem.エスカレーション判定="●",true,false)
+            Width: =24
+            X: =12
+            Y: =26
+            ZIndex: =16
+
+    "'id.text_6' As label":
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: =""
+        Width: =44
+        X: =223
+        Y: =353
+        ZIndex: =3
+
+    "'title.text_6' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: |-
+            ="資材調達       
+            番号"
+        Width: =99
+        X: =269
+        Y: =353
+        ZIndex: =4
+
+    "'tantousha.text_6' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: |-
+            ="契約
+            種別"
+        Width: =80
+        X: =368
+        Y: =353
+        ZIndex: =5
+
+    "'createddate.text_11' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: |-
+            ="タスク
+            ステータス"
+        Width: =121
+        X: =449
+        Y: =353
+        ZIndex: =6
+
+    "'createddate.text_15' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: ="優先度"
+        Width: =88
+        X: =692
+        Y: =353
+        ZIndex: =7
+
+    "'createddate.text_14' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: |-
+            ="調達
+            依頼件名"
+        Width: =122
+        X: =570
+        Y: =353
+        ZIndex: =8
+
+    "'createddate.text_16' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: |-
+            ="担当
+            会社名
+            "
+        Width: =98
+        X: =780
+        Y: =353
+        ZIndex: =9
+
+    "'createddate.text_17' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: |-
+            ="担当者
+            名
+            "
+        Width: =98
+        X: =878
+        Y: =353
+        ZIndex: =10
+
+    "'createddate.text_18' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: |-
+            ="アサ
+            イン"
+        Width: =69
+        X: =977
+        Y: =353
+        ZIndex: =11
+
+    "'createddate.text_20' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: |-
+            ="納期/完工日
+            /完了日"
+        Width: =149
+        X: =1186
+        Y: =353
+        ZIndex: =13
+
+    "'createddate.text_19' As label":
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =3
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Text: |-
+            ="調達
+            依頼日"
+        Width: =140
+        X: =1046
+        Y: =353
+        ZIndex: =14
+
+    Icon5_11 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =224
+        Y: =360
+        ZIndex: =15
+
+    Icon5_21 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =1295
+        Y: =360
+        ZIndex: =16
+
+    Icon5_19 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =1008
+        Y: =360
+        ZIndex: =17
+
+    Icon5_18 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =929
+        Y: =360
+        ZIndex: =18
+
+    Icon5_15 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        OnSelect: |-
+            =UpdateContext({SortDescending1: !SortDescending1})
+        Width: =38
+        X: =650
+        Y: =360
+        ZIndex: =19
+
+    Icon5_17 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =837
+        Y: =360
+        ZIndex: =20
+
+    Icon5_16 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =745
+        Y: =360
+        ZIndex: =21
+
+    Icon5_14 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =538
+        Y: =360
+        ZIndex: =22
+
+    Icon5_13 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =411
+        Y: =360
+        ZIndex: =23
+
+    Icon5_12 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =338
+        Y: =360
+        ZIndex: =24
+
+    Icon5_20 As icon.ArrowsUpDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =30
+        Icon: =Icon.Sort
+        Width: =38
+        X: =1136
+        Y: =360
+        ZIndex: =25
+
+    Button4_8 As button:
+        Align: =Align.Left
+        BorderColor: =RGBA(135, 148, 161, 1)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =60
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(135, 148, 161, 1)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        Size: =20
+        Text: ="  一覧"
+        Width: =1110
+        X: =223
+        Y: =88
+        ZIndex: =29
+
+    Button4_11 As button:
+        BorderColor: =RGBA(135, 148, 161, 1)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =35
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(135, 148, 161, 1)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="エクスポート"
+        Width: =145
+        X: =237
+        Y: =299
+        ZIndex: =31
+
+    Label5_2 As label:
+        Color: =RGBA(79, 90, 94, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="最終インポート時刻"
+        Width: =179
+        X: =808
+        Y: =316
+        ZIndex: =32
+
+    Button4_10 As button:
+        BorderColor: =RGBA(135, 148, 161, 1)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =27
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(135, 148, 161, 1)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="クリア"
+        Width: =94
+        X: =1236
+        Y: =302
+        ZIndex: =33
+
+    Dropdown2_2 As dropdown:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        ChevronBackground: =RGBA(135, 148, 161, 1)
+        ChevronDisabledBackground: =RGBA(135, 148, 161, 1)
+        ChevronDisabledFill: =RGBA(135, 148, 161, 1)
+        ChevronHoverBackground: =RGBA(135, 148, 161, 1)
+        Color: =
+        Default: ="担当者名"
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Height: =43
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverColor: |
+            =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)                   
+        Items: =Choices(案件項目仮.担当者名)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        SelectionFill: =RGBA(135, 148, 161, 1)
+        Width: =198
+        X: =236
+        Y: =236
+        ZIndex: =35
+
+    Dropdown2_3 As dropdown:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        ChevronBackground: =RGBA(135, 148, 161, 1)
+        ChevronDisabledBackground: =RGBA(135, 148, 161, 1)
+        ChevronDisabledFill: =RGBA(135, 148, 161, 1)
+        ChevronHoverBackground: =RGBA(135, 148, 161, 1)
+        Color: =
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Height: =43
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverColor: |
+            =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)                   
+        Items: =DropDownSample
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        SelectionFill: =RGBA(135, 148, 161, 1)
+        Width: =198
+        X: =450
+        Y: =237
+        ZIndex: =38
+
+    Dropdown2_6 As dropdown:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        ChevronBackground: =RGBA(135, 148, 161, 1)
+        ChevronDisabledBackground: =RGBA(135, 148, 161, 1)
+        ChevronDisabledFill: =RGBA(135, 148, 161, 1)
+        ChevronHoverBackground: =RGBA(135, 148, 161, 1)
+        Color: =
+        Default: ="契約種別"
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Height: =43
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverColor: |
+            =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)                   
+        Items: =Choices(案件項目仮.契約種別)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        SelectionFill: =RGBA(135, 148, 161, 1)
+        Width: =258
+        X: =670
+        Y: =168
+        ZIndex: =41
+
+    Dropdown2_7 As dropdown:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        ChevronBackground: =RGBA(135, 148, 161, 1)
+        ChevronDisabledBackground: =RGBA(135, 148, 161, 1)
+        ChevronDisabledFill: =RGBA(135, 148, 161, 1)
+        ChevronHoverBackground: =RGBA(135, 148, 161, 1)
+        Color: =
+        Default: ="タスクステータス"
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Height: =43
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverColor: |
+            =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)                   
+        Items: =Choices(案件項目仮.タスクステータス)
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        SelectionFill: =RGBA(135, 148, 161, 1)
+        Width: =258
+        X: =950
+        Y: =168
+        ZIndex: =42
+
+    Rectangle4_1 As rectangle:
+        Fill: =RGBA(247, 247, 247, 1)
+        Height: =71
+        Width: =1321
+        X: =12
+        Y: =5
+        ZIndex: =43
+
+    menu_2 As icon.Hamburger:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(135, 148, 161, 1)
+        Height: =52
+        Icon: =Icon.Hamburger
+        OnSelect: =Set(hide_tab, !hide_tab)
+        Width: =52
+        X: =151
+        Y: =14
+        ZIndex: =46
+
+    jeralogo_2 As image:
+        Height: =57
+        Image: ='JERA-logo'
+        X: =29
+        Y: =12
+        ZIndex: =49
+
+    Rectangle4_5 As rectangle:
+        Fill: =RGBA(247, 247, 247, 1)
+        Height: =650
+        Width: =200
+        X: =12
+        Y: =108
+        ZIndex: =50
+
+    jeratitle_7 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        Size: =18
+        Text: ="JERA"
+        Width: =97
+        X: =20
+        Y: =117
+        ZIndex: =51
+
+    Icon8_7 As icon.ChevronDown:
+        Color: =RGBA(135, 148, 161, 1)
+        Height: =44
+        Icon: =Icon.ChevronDown
+        OnSelect: =Set(JERA,true)
+        Visible: |-
+            =If(JERA=false,true)
+            ///クリックすると調達依頼一覧とインポートが表示される
+        Width: =25
+        X: =167
+        Y: =116
+        ZIndex: =52
+
+    jeratitle_8 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Size: =14
+        Text: ="ダッシュボード"
+        Width: =141
+        X: =20
+        Y: =165
+        ZIndex: =53
+
+    Icon8_8 As icon.ChevronDown:
+        Color: =RGBA(135, 148, 161, 1)
+        Height: =44
+        Icon: =Icon.ChevronDown
+        Width: =25
+        X: =167
+        Y: =295
+        ZIndex: =54
+
+    systemAD As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =43
+        Size: =14
+        Text: ="システム管理"
+        Width: =122
+        X: =20
+        Y: =469
+        ZIndex: =55
+
+    Icon8_9 As icon.ChevronDown:
+        Color: =RGBA(135, 148, 161, 1)
+        Height: =44
+        Icon: =Icon.ChevronDown
+        Width: =25
+        X: =164
+        Y: =163
+        ZIndex: =56
+
+    list_3 As groupContainer.manualLayoutContainer:
+        Height: =108
+        Visible: =If(JERA=true,true)
+        Width: =183
+        X: =20
+        Y: =169
+        ZIndex: =57
+
+        Button5_16 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen_1,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="調達依頼一覧"
+            Width: =128
+            ZIndex: =3
+
+        Button5_17 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="インポート"
+            Width: =128
+            Y: =39
+            ZIndex: =4
+
+    dashboard_3 As groupContainer.manualLayoutContainer:
+        Height: =108
+        Width: =183
+        X: =20
+        Y: =339
+        ZIndex: =58
+
+        Button5_18 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen_1,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="SLA・KPI"
+            Width: =94
+            X: =4
+            Y: =4
+            ZIndex: =1
+
+        Button5_19 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen_1,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="業務管理"
+            Width: =94
+            X: =4
+            Y: =43
+            ZIndex: =2
+
+    "'System Administration_3' As groupContainer.manualLayoutContainer":
+        Height: =185
+        Width: =183
+        X: =20
+        Y: =512
+        ZIndex: =59
+
+        Button5_20 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            Height: =39
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen_1,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="アクティビティ履歴"
+            Width: =178
+            X: =4
+            Y: =4
+            ZIndex: =1
+
+        Button5_21 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen_1,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="アクティビティログ"
+            Width: =157
+            X: =25
+            Y: =40
+            ZIndex: =2
+
+        Button5_22 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen_1,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="ユーザー権限設定"
+            Width: =178
+            X: =4
+            Y: =80
+            ZIndex: =3
+
+        Button5_23 As button:
+            Align: =Align.Left
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(135, 148, 161, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 0, 0, 0)
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(135, 148, 161, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate(TopScreen_1,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Size: =12
+            Text: ="マスタ管理"
+            Width: =178
+            X: =4
+            Y: =115
+            ZIndex: =4
+
+    Label5_3 As label:
+        Color: =RGBA(79, 90, 94, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: |-
+            ="※PP:　Power Platformから自動アサイン"
+        Width: =354
+        X: =228
+        Y: =712
+        ZIndex: =60
+
+    Image4_19 As image:
+        Height: =299
+        Image: =bar1
+        X: =218
+        Y: =399
+        ZIndex: =62
+
+    Image4_12 As image:
+        Height: =299
+        Image: =bar1
+        X: =318
+        Y: =398
+        ZIndex: =63
+
+    Image4_11 As image:
+        Height: =307
+        Image: =bar1
+        X: =1136
+        Y: =390
+        ZIndex: =64
+
+    Image4_18 As image:
+        Height: =299
+        Image: =bar1
+        Width: =80
+        X: =1006
+        Y: =398
+        ZIndex: =65
+
+    Image4_17 As image:
+        Height: =298
+        Image: =bar1
+        Width: =80
+        X: =936
+        Y: =398
+        ZIndex: =66
+
+    Image4_16 As image:
+        Height: =298
+        Image: =bar1
+        Width: =94
+        X: =733
+        Y: =398
+        ZIndex: =68
+
+    Image4_15 As image:
+        Height: =298
+        Image: =bar1
+        Width: =80
+        X: =652
+        Y: =398
+        ZIndex: =69
+
+    Image4_14 As image:
+        Height: =298
+        Image: =bar1
+        Width: =80
+        X: =530
+        Y: =398
+        ZIndex: =70
+
+    Image4_13 As image:
+        Height: =300
+        Image: =bar1
+        Width: =82
+        X: =407
+        Y: =398
+        ZIndex: =71
+
+    TextInput1_1 As text:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Default: =""
+        Height: =43
+        HintText: ="フリーテキスト"
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Width: =413
+        X: =235
+        Y: =168
+        ZIndex: =72
+
+    Button4_9 As button:
+        BorderColor: =RGBA(135, 148, 161, 1)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        Fill: =RGBA(135, 148, 161, 1)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =27
+        HoverBorderColor: =RGBA(135, 148, 161, 1)
+        HoverFill: =RGBA(135, 148, 161, 1)
+        OnSelect: =Collect(
+        PressedBorderColor: =RGBA(135, 148, 161, 1)
+        PressedColor: =RGBA(135, 148, 161, 1)
+        PressedFill: =RGBA(135, 148, 161, 1)
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Size: =14
+        Text: ="検索"
+        Width: =94
+        X: =1236
+        Y: =250
+        ZIndex: =73
+
+    Image4_10 As image:
+        Height: =308
+        Image: =bar1
+        Width: =80
+        X: =838
+        Y: =390
+        ZIndex: =74
+
+    DatePicker1_1 As datepicker:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =43
+        IconBackground: =RGBA(135, 148, 161, 1)
+        Width: =258
+        X: =670
+        Y: =237
+        ZIndex: =75
+
+    DatePicker2_1 As datepicker:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(135, 148, 161, 1)
+        DisabledFill: =RGBA(135, 148, 161, 1)
+        FocusedBorderColor: =RGBA(135, 148, 161, 1)
+        Height: =43
+        IconBackground: =RGBA(135, 148, 161, 1)
+        Width: =258
+        X: =950
+        Y: =237
+        ZIndex: =76
+
+    Icon8_10 As icon.ChevronUp:
+        Color: =RGBA(135, 148, 161, 1)
+        Height: =25
+        Icon: =Icon.ChevronUp
+        OnSelect: =Set(JERA,false)
+        Visible: =If(JERA=true,true)
+        Width: =25
+        X: =167
+        Y: =123
+        ZIndex: =77
+
+    Icon10_1 As icon.ChevronUp:
+        Color: =RGBA(135, 148, 161, 1)
+        Height: =25
+        Icon: =Icon.ChevronUp
+        OnSelect: =Set(JERA,false)
+        Visible: =If(JERA=true,true)
+        Width: =25
+        X: =142
+        Y: =277
+        ZIndex: =78
+
